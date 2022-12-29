@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+* {
+    background-color:#17171C ;
+    color: #FFFFFF;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+}
+
+.container-calculator {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 568px;
+    height: 624px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.calculator-content {
+    width: 528px;
+    height: 528px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.content-numbers {
+    text-align: end;
+    margin-right: 20px;
+    font-size: 75px;
+}
+
+.content-numbers-history {
+    text-align: end;
+    margin-right: 16px;
+    opacity: 0.5;
+    font-size: 40px;
+}
+
+.content-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* divide la rejilla en 4 columnas de igual tamaño */
+    grid-template-rows: repeat(5, 1fr); /* divide la rejilla en 5 filas de igual tamaño */
+    
+}
+.button {
+    width: 120px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: none;
+    font-size: 19px;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.button:hover {
+    opacity: 0.7;
+}
+
+.button-tool {
+    background-color: #4e505f;
+}
+
+.button-operator {
+    background-color: #4b5efc;
+}
+
+.button-numbers {
+    background-color: #2e2f38;
+}
+
