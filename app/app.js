@@ -1,37 +1,60 @@
 //Variables
 const buttons = document.querySelectorAll(".button");
-//const textNumber = document.getElementById("content-numbers-history")
+const formulario = document.getElementById("calculadora");
 
-//Funcion mostrar valor
+//Funciones
 function ShowText(newText) {
-    document.getElementById("content-numbers-history").textContent += newText;
-}
-function DeleleAll() {
-    document.getElementById("content-numbers-history").textContent = "";
+  document.getElementById("content-numbers-history").textContent += newText;
 }
 
+function DeleteAll() {
+  document.getElementById("content-numbers-history").textContent = "";
+  document.getElementById("content-numbers").textContent = "";
+}
+
+function Calculate() {
+  let input = document.getElementById("content-numbers-history").textContent;
+  let result = eval(input);
+  document.getElementById("content-numbers").textContent = result;
+}
+
+function DeleteChar() {
+  let input = document.getElementById("content-numbers-history").textContent;
+  input = input.slice(0, -1);
+  document.getElementById("content-numbers-history").textContent = input;
+  Calculate()
+}
+
+//Eventos
 for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", function(event) {
-    let button = event.target; // Obtiene el botón clicado
-    let buttonText = button.textContent; // Obtiene el texto del botón
-    let buttonType = button.getAttribute("data-type"); // Obtiene el tipo de botón
+  buttons[i].addEventListener("click", function (event) {
+    let button = event.target;
+    let buttonText = button.textContent;
+    let buttonType = button.getAttribute("data-type");
 
-    // Realiza la acción correspondiente según el tipo de botón
     switch (buttonType) {
       case "number":
-        console.log("Se ha clicado en el botón de número: " + buttonText);
-        ShowText(buttonText)
+        ShowText(buttonText);
+        Calculate();
         break;
+
       case "operator":
-        console.log("Se ha clicado en el botón de operador: " + buttonText);
-        ShowText(buttonText)
-        break;
-      case "tool":
-        console.log("Se ha clicado en el botón de herramienta: " + buttonText);
-        if(buttonText == "C") {
-            DeleleAll();
+        if (buttonText === "=") {
+          calculate();
         } else {
-            ShowText(buttonText)
+          ShowText(buttonText);
+          Calculate();
+        }
+        break;
+
+      case "tool":
+        if (buttonText == "C") {
+          DeleteAll();
+        } else if (buttonText === "delete") {
+          DeleteChar();
+        } else {
+          Calculate();
+          ShowText(buttonText);
         }
         break;
     }

@@ -15,29 +15,33 @@
             class="content-numbers-history"
             id="content-numbers-history"
           ></div>
-          <div class="content-numbers" id="content-numbers">1,742</div>
-          <div class="content-buttons">
-            <button class="button button-tool" id="button-clear" data-type="tool">C</button>
-            <button class="button button-tool" id="button-memory" data-type="tool">+/-</button>
-            <button class="button button-tool" id="button-percient" data-type="tool">%</button>
-            <button class="button button-operator" id="button-divide" data-type="operator">/</button>
-            <button class="button button-numbers" data-type="number">7</button>
-            <button class="button button-numbers" data-type="number">8</button>
-            <button class="button button-numbers" data-type="number">9</button>
-            <button class="button button-operator" id="button-multiplication" data-type="operator">*</button>
-            <button class="button button-numbers" data-type="number">4</button>
-            <button class="button button-numbers" data-type="number">5</button>
-            <button class="button button-numbers" data-type="number">6</button>
-            <button class="button button-operator" id="button-subtraction" data-type="operator">-</button>
-            <button class="button button-numbers" data-type="number">1</button>
-            <button class="button button-numbers" data-type="number">2</button>
-            <button class="button button-numbers" data-type="number">3</button>
-            <button class="button button-operator" id="button-plus" data-type="operator">+</button>
-            <button class="button button-numbers" data-type="number">.</button>
-            <button class="button button-numbers" data-type="number">0</button>
-            <button class="button button-numbers" data-type="tool">delete</button>
-            <button class="button button-operator" id="button-equality" data-type="operator">=</button>
+        <form action="" onsubmit="return false;" id="calculator">
+            <div class="content-numbers" id="content-numbers">
+             <input class="result" type="text" id="result" disabled>
+           </div>
+            <div class="content-buttons">
+              <button class="button button-tool" id="button-clear" data-type="tool">C</button>
+             <button class="button button-tool" id="button-memory" data-type="tool">+/-</button>
+              <button class="button button-tool" id="button-percient" data-type="tool">%</button>
+              <button class="button button-operator" id="button-divide" data-type="operator" value="/">/</button>
+              <button class="button button-numbers" data-type="number" value="7">7</button>
+              <button class="button button-numbers" data-type="number" value="8">8</button>
+              <button class="button button-numbers" data-type="number" value="9">9</button>
+              <button class="button button-operator" id="button-multiplication" data-type="operator" value="*">*</button>
+              <button class="button button-numbers" data-type="number" value="4">4</button>
+              <button class="button button-numbers" data-type="number" value="5">5</button>
+              <button class="button button-numbers" data-type="number" value="6">6</button>
+              <button class="button button-operator" id="button-subtraction" data-type="operator" value="-">-</button>
+              <button class="button button-numbers" data-type="number" value="1">1</button>
+              <button class="button button-numbers" data-type="number" value="2">2</button>
+              <button class="button button-numbers" data-type="number" value="3">3</button>
+              <button class="button button-operator" id="button-plus" data-type="operator" value="+">+</button>
+              <button class="button button-numbers" data-type="number" value=".">.</button>
+              <button class="button button-numbers" data-type="number" value="0">0</button>
+              <button class="button button-numbers" data-type="tool">delete</button>
+              <button class="button button-operator" id="button-equality" data-type="operator" value="=">=</button>
           </div>
+        </form>
         </div>
       </div>
     </div>

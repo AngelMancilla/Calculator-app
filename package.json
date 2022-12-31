@@ -1,10 +1,10 @@
 {
   "name": "calculator-app",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.1",
+  "description": "App de calculadora",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm ../app/app.js"
   },
   "keywords": [],
   "author": "Angel Mancilla",
